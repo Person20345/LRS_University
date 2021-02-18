@@ -202,14 +202,14 @@ Poly sum_Poly_Poly (const Poly* poly1, const Poly* poly2) {
 }
 
 
-/*
+
 #define sum(X, Y) _Generic((X),\
-    const Poly*:   _Generic((Y),\
-        const Poly*: sum_Poly_Poly,\
-        const Term*: sum_Poly_Term\
+    Poly*:   _Generic((Y),\
+        Poly*: sum_Poly_Poly,\
+        Term*: sum_Poly_Term\
     )\
 )(X, Y)
-*/
+
 
 
 
@@ -244,22 +244,22 @@ int main (void) {
   poly1.size = 0;
   poly2.size = 0;
 
-  for (int i = 0; i < 4; i++) {
+  for (int i = 0; i < 1; i++) {
     printf("Write term %d:\n", (i+1));
     ourTerm = enterTerm();
 
-    poly1 = sum_Poly_Term (&poly1, &ourTerm);
+    poly1 = sum (&poly1, &ourTerm);
   }
 
   printf("Poly1:\n\t");
   printPoly (&poly1);
   printf("\n");
 
-  for (int i = 0; i < 4; i++) {
+  for (int i = 0; i < 1; i++) {
     printf("Write term %d:\n", (i+1));
     ourTerm = enterTerm();
 
-    poly2 = sum_Poly_Term (&poly2, &ourTerm);
+    poly2 = sum (&poly2, &ourTerm);
   }
 
   printf("Poly1:\n\t");
@@ -267,7 +267,7 @@ int main (void) {
   printf("\n");
 
   printf("sum:\n\t");
-  poly1 = sum_Poly_Poly (&poly1, &poly2);
+  poly1 = sum (&poly1, &poly2);
   printPoly (&poly1);
   printf("\n");
 
