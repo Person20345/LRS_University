@@ -9,7 +9,6 @@ Term setTerm (void) {
 
 
 
-
 Poly setPoly (void) {
   Poly poly = {0, 0};
   return poly;
@@ -99,7 +98,6 @@ Poly sum_Poly_Term (const Poly* poly, const Term* term) {
     answer.objects = (Term*) malloc (sizeof(Term) * answer.size);
   }
 
-
   // find = 0 => not found,
   // find = 1 => found place + drop in old cell & multiplier of this cell = 0
   // find = 2 => found place + drop in old cell,
@@ -118,7 +116,6 @@ Poly sum_Poly_Term (const Poly* poly, const Term* term) {
           answer.size = answer.size - 2;
           answer.objects = (Term*) realloc (answer.objects,
                                             sizeof(Term) * answer.size);
-
         } else {
           find = 2;
           // use size2 = (size1 - 1) becouse number of terms preserved
