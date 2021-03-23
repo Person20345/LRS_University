@@ -1,6 +1,6 @@
-#include "headers.h"
+#include "include/headers.h"
 
-// gcc main.c functions.c double.c int.c
+// gcc main.c src/functions.c src/double.c src/int.c
 
 int main () {
 	uint32_t numOfTerms;

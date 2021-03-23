@@ -16,6 +16,7 @@
 
 #include "polynomial.h"
 #include "functions.h"
+#include "exceptions.h"
 
 #include "double.h"
 #include "int.h"

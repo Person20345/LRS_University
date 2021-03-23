@@ -4,6 +4,8 @@
 typedef struct Polynomial {
 	void** multipliers;
 	uint32_t size;
+
+	
 	uint8_t dataSize;
 
 	void (*print) (const void*);
