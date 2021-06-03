@@ -1,4 +1,4 @@
-<h1>LR2</h1>
+<h1>LW2</h1>
 
 <h3>Compile:</h3>
 
