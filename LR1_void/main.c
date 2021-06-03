@@ -11,7 +11,6 @@ int main () {
 	double multiplier;
 
 	void** ppointer;
-	uint32_t oldSize;
 
 	printf("  Write num of terms in poly1: ");
 	scanf("%u", &numOfTerms);
@@ -22,11 +21,8 @@ int main () {
 		printf("    Write multiplier: ");
 		scanf("%lf", &multiplier);
 
-		oldSize = poly2.size;
 		ppointer = poly1.multipliers;
 		poly1 = addTerm (&poly1, &multiplier, degree);
-		for (int j = 0; j < oldSize; j++)
-			free (ppointer[j]);
 		free (ppointer);
 	}
 
@@ -39,11 +35,8 @@ int main () {
 		printf("    Write multiplier: ");
 		scanf("%lf", &multiplier);
 
-		oldSize = poly2.size;
 		ppointer = poly2.multipliers;
 		poly2 = addTerm (&poly2, &multiplier, degree);
-		for (int j = 0; j < oldSize; j++)
-			free (ppointer[j]);
 		free (ppointer);
 	}
 
@@ -56,11 +49,8 @@ int main () {
 	printf("\n");
 
 	// test compositionPoly()
-	oldSize = poly2.size;
 	ppointer = poly2.multipliers;
 	poly2 = compositionPoly (&poly1, &poly2);
-	for (int j = 0; j < oldSize; j++)
-		free (ppointer[j]);
 	free (ppointer);
 
 	printf("composition: ");
@@ -69,11 +59,8 @@ int main () {
 
 
 	// test mulPoly()
-	oldSize = poly2.size;
 	ppointer = poly2.multipliers;
 	poly2 = mulPoly(&poly1, &poly2);
-	for (int j = 0; j < oldSize; j++)
-		free (ppointer[j]);
 	free (ppointer);
 
 	printf("mul: ");
@@ -84,11 +71,8 @@ int main () {
 	printf("    Write scalar for multiplication with poly: ");
 	scanf("%lf", &multiplier);
 
-	oldSize = poly2.size;
 	ppointer = poly2.multipliers;
 	poly2 = mulPolyScalar (&poly2, &multiplier);
-	for (int j = 0; j < oldSize; j++)
-		free (ppointer[j]);
 	free (ppointer);
 
 	printf("scalar * poly: ");
@@ -102,11 +86,8 @@ int main () {
 	printf("    Write scalar for calculatig: ");
 	scanf("%lf", &multiplier);
 
-	oldSize = poly2.size;
 	ppointer = poly2.multipliers;
 	var = сalculatePoly (&poly2, &multiplier);
-	for (int j = 0; j < oldSize; j++)
-		free (ppointer[j]);
 	free (ppointer);
 
 	varD = (double*) var;

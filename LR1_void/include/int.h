@@ -5,7 +5,7 @@ static void printInt (const void* variable);
 
 static int сompareWithZeroInt (const void* variable);
 
-static void* initNullInt ();
+static void* initZeroInt ();
 
 
 

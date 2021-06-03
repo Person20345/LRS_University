@@ -5,7 +5,7 @@ static void printDouble (const void* variable);
 
 static int сompareWithZeroDouble (const void* variable);
 
-static void* initNullDouble ();
+static void* initZeroDouble ();
 
 
 

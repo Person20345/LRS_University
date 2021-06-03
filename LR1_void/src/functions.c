@@ -5,12 +5,12 @@
 // just printing without "\n" in the end
 // print without 0-elements
 void printPoly (const Poly* poly) {
-	for (int i = 0; i < poly->size; i++)
+	for (int i = 0; i < poly->length; i++)
 		if (poly->сompareWithZero(poly->multipliers[i]) != 0) {
 			printf("(");
 			poly->print(poly->multipliers[i]);
 			printf(")x^%d", i);
-			if (i < (poly->size - 1))
+			if (i < (poly->length - 1))
 				printf(" + ");
 		}
 }
@@ -19,11 +19,11 @@ void printPoly (const Poly* poly) {
 
 // print with 0-elements
 void printFullPoly (const Poly* poly) {
-	for (int i = 0; i < poly->size; i++){
+	for (int i = 0; i < poly->length; i++){
 		printf("(");
 		poly->print(poly->multipliers[i]);
 		printf(")x^%d", i);
-		if (i < (poly->size - 1))
+		if (i < (poly->length - 1))
 			printf(" + ");
 	}
 }
@@ -36,10 +36,10 @@ Poly addTerm (const Poly* poly, const void* multiplier, uint32_t degree) {
 
 	void* pointer;
 
-	if (poly->size < (degree + 1)) {
+	if (poly->length < (degree + 1)) {
 		answer = poly->init (degree + 1);
-		for (int i = 0; i < poly->size; i++) {
-			pointer = answer.multipliers[i];
+		for (int i = 0; i < poly->length; i++) {
+			pointer = &answer.multipliers[i];
 			answer.multipliers[i] = poly->sum (answer.multipliers[i],
 			                                   poly->multipliers[i]);
 			free(pointer);
@@ -49,11 +49,11 @@ Poly addTerm (const Poly* poly, const void* multiplier, uint32_t degree) {
 		                                        multiplier);
 		free(pointer);
 	}	else {
-		answer = poly->init (poly->size);
-		for (int i = 0; i < poly->size; i++)
+		answer = poly->init (poly->length);
+		for (int i = 0; i < poly->length; i++)
 			memcpy (answer.multipliers[i], poly->multipliers[i], poly->dataSize);
 
-		pointer = answer.multipliers[degree];
+		pointer = &answer.multipliers[degree];
 		answer.multipliers[degree] = poly->sum (answer.multipliers[degree],
 		                                        multiplier);
 		free (pointer);
@@ -73,13 +73,13 @@ Poly sumPoly (const Poly* poly1, const Poly* poly2) {
 	const Poly* maxPoly;
 
 	if (poly1->dataSize == poly2->dataSize) {
-		if (poly1->size < poly2->size) {
-			answer = poly2->init (poly2->size);
-			minSize = poly1->size;
+		if (poly1->length < poly2->length) {
+			answer = poly2->init (poly2->length);
+			minSize = poly1->length;
 			maxPoly = poly2;
 		} else {
-			answer = poly1->init (poly1->size);
-			minSize = poly2->size;
+			answer = poly1->init (poly1->length);
+			minSize = poly2->length;
 			maxPoly = poly1;
 		}
 
@@ -90,7 +90,7 @@ Poly sumPoly (const Poly* poly1, const Poly* poly2) {
 			free (pointer);
 		}
 
-		for (int i = minSize; i < answer.size; i++) {
+		for (int i = minSize; i < answer.length; i++) {
 			pointer = answer.multipliers[i];
 			answer.multipliers[i] = answer.sum (answer.multipliers[i],
 			                                     maxPoly->multipliers[i]);
@@ -109,9 +109,9 @@ Poly mulPoly (const Poly* poly1, const Poly* poly2) {
 	void* pointer;
 
 	if (poly1->dataSize == poly2->dataSize) {
-		answer = poly1->init ((poly1->size - 1) + (poly2->size - 1) + 1);
-		for (int i = 0; i < poly1->size; i++)
-			for (int j = 0; j < poly2->size; j++) {
+		answer = poly1->init ((poly1->length - 1) + (poly2->length - 1) + 1);
+		for (int i = 0; i < poly1->length; i++)
+			for (int j = 0; j < poly2->length; j++) {
 				pointer = answer.multipliers[i+j];
 				answer.multipliers[i+j] = answer.sum (answer.mul (poly1->multipliers[i],
 				                                                  poly2->multipliers[j]),
@@ -131,8 +131,8 @@ Poly mulPolyScalar (const Poly* poly, const void* scalar) {
 	void* pointer;
 
 	if (poly->сompareWithZero(scalar) != 0) {
-		answer = poly->init (poly->size);
-		for (int i = 0; i < poly->size; i++) {
+		answer = poly->init (poly->length);
+		for (int i = 0; i < poly->length; i++) {
 			pointer = answer.multipliers[i];
 			answer.multipliers[i] = answer.sum (answer.mul (poly->multipliers[i],
 			                                                scalar),
@@ -149,15 +149,17 @@ Poly mulPolyScalar (const Poly* poly, const void* scalar) {
 
 
 void* сalculatePoly (const Poly * poly, const void* variable) {
-	void* answer = poly->initNull ();
+	void* answer;
+	poly->initZero (answer);
 	void* pointer;
 
-	void* degree = poly->initNull ();
+	void* degree; 
+	poly->initZero (degree);
 
 	if (poly->сompareWithZero(variable) != 0)
-		for (int i = 0; i < poly->size; i++) {
+		for (int i = 0; i < poly->length; i++) {
 			pointer = degree;
-			degree = poly->initNull ();
+			poly->initZero (&degree);
 			free(pointer);
 
 			// degree = x
@@ -203,55 +205,40 @@ Poly compositionPoly (const Poly* poly1, const Poly* poly2) {
 	if (poly1->dataSize == poly2->dataSize) {
 		degree = poly1->init (1);
 
-		// set answer size
-		answer = poly1->init ((poly1->size - 1) * (poly2->size - 1) + 1);
+		// set answer length
+		answer = poly1->init ((poly1->length - 1) * (poly2->length - 1) + 1);
 
-		for (int i = 0; i < poly1->size; i++) {
-			// find size of polinomial in this degree
+		for (int i = 0; i < poly1->length; i++) {
+			// find length of polinomial in this degree
 			sizeOfDegree = 1;
 			for (int j = 0; j < i; j++)
-				sizeOfDegree *= (poly2->size - 1);
+				sizeOfDegree *= (poly2->length - 1);
 			sizeOfDegree++;
 			// set degree
-			oldSize = degree.size;
 			ppointer = degree.multipliers;
 			degree = degree.init (sizeOfDegree);
-			for (int j = 0; j < oldSize; j++)
-				free (ppointer[j]);
 			free (ppointer);
 
 
 			// set first multiplier in degree
-			oldSize = degree.size;
 			ppointer = degree.multipliers;
 			degree = sumPoly (&degree, poly2);
-			for (int j = 0; j < oldSize; j++)
-				free (ppointer[j]);
 			free (ppointer);
 			// degree
 			for (int j = 1; j < i; j++) {
-				oldSize = degree.size;
 				ppointer = degree.multipliers;
 				degree = mulPoly (&degree, poly2);
-				for (int k = 0; k < oldSize; k++)
-					free (ppointer[k]);
 				free (ppointer);
 			}
 
 			// multiply on the coefficient
-			oldSize = degree.size;
 			ppointer = degree.multipliers;
 			degree = mulPolyScalar (&degree, poly1->multipliers[i]);
-			for (int j = 0; j < oldSize; j++)
-				free (ppointer[j]);
 			free (ppointer);
 
 			// add to answer
-			oldSize = answer.size;
 			ppointer = answer.multipliers;
 			answer = sumPoly (&answer, &degree);
-			for (int j = 0; j < oldSize; j++)
-				free (ppointer[j]);
 			free (ppointer);
 		}
 	}

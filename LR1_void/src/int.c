@@ -18,7 +18,7 @@ static int сompareWithZeroInt (const void* variable) {
 		return -1;
 }
 
-static void* initNullInt () {
+static void* initZeroInt () {
 	void* answer = (void*) malloc (sizeof(int));
 
 	int* pointer = (int*) answer;
@@ -57,14 +57,15 @@ Poly initPolyInt (uint32_t size) {
 	newPoly.dataSize = sizeof(int);
 
 	newPoly.size = size;
-	if (size > 0)
-		newPoly.multipliers = (void**) calloc(newPoly.size, sizeof(void*));
-		for (int i = 0; i < newPoly.size; i++)
-			newPoly.multipliers[i] = initNullInt();
+	if (size > 0) {
+		newPoly.multipliers = (void*) calloc(newPoly.size, sizeof(int));
+		for (int i = 0; i < newPoly.length; i++)
+			newPoly.multipliers[i] = initZeroInt();
+	}
 
 	newPoly.print = printInt;
 	newPoly.сompareWithZero = сompareWithZeroInt;
-	newPoly.initNull = initNullInt;
+	newPoly.initZero = initZeroInt;
 
 	newPoly.sum = sumInt;
 	newPoly.mul = mulInt;

@@ -18,13 +18,9 @@ static int сompareWithZeroDouble (const void* variable) {
 		return -1;
 }
 
-static void* initNullDouble () {
-	void* answer = (void*) malloc (sizeof(double));
-
-	double* pointer = (double*) answer;
-  *pointer = 0.0;
-
-  return answer;
+static void initZeroDouble (void* variable) {
+	double var = 0.0;
+	*variable = (double) var;
 }
 
 
@@ -57,14 +53,15 @@ Poly initPolyDouble (uint32_t size) {
 	newPoly.dataSize = sizeof(double);
 
 	newPoly.size = size;
-	if (size > 0)
-		newPoly.multipliers = (void**) calloc(newPoly.size, sizeof(void*));
-		for (int i = 0; i < newPoly.size; i++)
-			newPoly.multipliers[i] = initNullDouble();
-
+	if (size > 0) {
+		newPoly.multipliers = (void*) calloc(newPoly.size, sizeof(double));
+		for (int i = 0; i < newPoly.length; i++)
+			initZeroDouble(&newPoly.multipliers[i]);
+	}
+	
 	newPoly.print = printDouble;
 	newPoly.сompareWithZero = сompareWithZeroDouble;
-	newPoly.initNull = initNullDouble;
+	newPoly.initZero = initZeroDouble;
 
 	newPoly.sum = sumDouble;
 	newPoly.mul = mulDouble;

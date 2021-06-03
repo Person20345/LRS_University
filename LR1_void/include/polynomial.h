@@ -3,14 +3,14 @@
 
 typedef struct Polynomial {
 	void** multipliers;
-	uint32_t size;
+	uint32_t length;
 
 	
 	uint8_t dataSize;
 
 	void (*print) (const void*);
 	int (*сompareWithZero) (const void*);
-	void* (*initNull) ();
+	void* (*initZero) ();
 
 	void* (*sum) (const void*, const void*);
 	void* (*mul) (const void*, const void*);
