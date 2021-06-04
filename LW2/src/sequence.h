@@ -17,6 +17,8 @@ public:
 	virtual void insert(type item, int index) = 0;
 	virtual Sequence<type>* concat(const Sequence<type>& value) = 0;
 
+	virtual type& operator[] (int index);
+
 	friend Sequence<type>* Sequence<type>::concat(const Sequence<type>& value);
 };
 
