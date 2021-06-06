@@ -1,10 +1,20 @@
 #include <iostream>
 
+class B {
+private:
+	int a;
+public:
+	~B() {
+		std::cout << "B-Destructor\n";
+	}
+};
+
 class A {
 private:
-	int* array_;
 	int size_;
+	int* array_;
 public:
+
 	A(int size) {
 		size_ = size;
 		array_ = (int*) new int[size];
@@ -40,6 +50,8 @@ public:
 
 		A ret(this->length());
 
+		B test;
+
 		for(int i = 0; i < this->length(); i++)
 			ret.set(i, this->get(i) + a.get(i));
 
@@ -51,6 +63,8 @@ public:
 			std::cerr << "Error '='\n";
 			exit(1);
 		}
+
+		std::cout << " =\n";
 		
 		for (int i = 0; i < this->length(); i++)
 			this->set(i, a.get(i));
@@ -85,7 +99,7 @@ int main() {
 	print(&array1);
 	print(&array2);
 
-	array3 = array1 + array2 + array2;
+	array3 = array1 + array2 + array2 + array2 + array2;
 
 	print(&array3);
 
