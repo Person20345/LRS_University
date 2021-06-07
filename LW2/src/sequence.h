@@ -6,6 +6,8 @@
 template <typename type>
 class Sequence {
 public:
+	virtual void resize(int size) = 0;
+
 	virtual type getFirst() const = 0;
 	virtual type getLast() const = 0;
 	virtual type get(int index) const = 0;
@@ -17,9 +19,11 @@ public:
 	virtual void insert(type item, int index) = 0;
 	virtual Sequence<type>* concat(const Sequence<type>& value) = 0;
 
-	virtual type& operator[] (int index);
+	virtual type& operator[] (int index) const = 0;
 
 	friend Sequence<type>* Sequence<type>::concat(const Sequence<type>& value);
+
+	virtual ~Sequence();
 };
 
 #endif

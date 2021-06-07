@@ -1,5 +1,7 @@
 #include <iostream>
 
+
+
 class B {
 private:
 	int a;
@@ -8,6 +10,8 @@ public:
 		std::cout << "B-Destructor\n";
 	}
 };
+
+
 
 class A {
 private:
@@ -83,6 +87,8 @@ void print(const A* a) {
 		std::cout << a->get(i) << "[" << i << "]  ";
 	std::cout << std::endl;
 }
+
+
 
 int main() {
 

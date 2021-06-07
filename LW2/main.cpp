@@ -1,9 +1,9 @@
 #include <iostream>
 
-#include "tests/sequence_test.h"
+#include "tests/vector_test.h"
 
 int main() {
-	sequence_test();
+	vector_test();
 
 	return 0;
 }

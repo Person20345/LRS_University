@@ -32,6 +32,13 @@ DynamicArraySequence<type>::DynamicArraySequence(const Sequence<type>& value) {
 
 
 template <typename type>
+void DynamicArraySequence<type>::resize(int size) {
+	array_->resize(size);
+}
+
+
+
+template <typename type>
 type DynamicArraySequence<type>::getFirst() const {
 	return array_->get(0);
 }
@@ -115,7 +122,7 @@ void DynamicArraySequence<type>::insert(type item, int index) {
 
 
 template <typename type>
-type& DynamicArraySequence<type>::operator[] (int index) {
+type& DynamicArraySequence<type>::operator[] (int index) const {
 	return (*array_)[index];
 }
 
@@ -135,6 +142,5 @@ DynamicArraySequence<type>* DynamicArraySequence<type>::concat(const Sequence<ty
 
 template <typename type>
 DynamicArraySequence<type>::~DynamicArraySequence() {
-	array_->~DynamicArray();
 	delete array_;
 }

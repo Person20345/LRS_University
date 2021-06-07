@@ -3,48 +3,87 @@
 
 
 template <typename type>
-Vector() {}
+Vector<type>::Vector() {
+  index_ = 0;
+}
 
 
 
 template <typename type>
-Vector(int size) {
+Vector<type>::Vector(int TYPE) {
+  this->setSequence(TYPE);
+  index_ = 0;
+}
+
+
+
+template <typename type>
+Vector<type>::Vector(int TYPE, int size) {
+  this->setSequence(TYPE);
   this->setSize(size);
+  index_ = 0;
 }
 
 
 
 template <typename type>
-void setSize(int size) {4
-  type newItem;
-  for (int i = 0; i < size; i++)
-    coordinates_.addBack(newItem);
+void Vector<type>::setSequence(int TYPE) {
+  sequence_type_ = TYPE;
+
+  if (TYPE == DYNAMICARRAY_TYPE)
+    coordinates_ = (DynamicArraySequence<type>*) new DynamicArraySequence<type>;
+  else if (TYPE == LINKEDLIST_TYPE)
+    coordinates_ = (LinkedListSequence<type>*) new LinkedListSequence<type>;
 }
 
 
 
 template <typename type>
-Vector<type> norm=(Vector<types>& vector) {
-  coordinates_[];
+void Vector<type>::setIndex(int index) {
+  index_ = index;
 }
 
 
 
 template <typename type>
-Vector<type>& operator + (Vector<type>& vector1, Vector<type>& vector2) const {
-  try {
-    if (vector1.length() != vector2.length())
-      throw "vectors of different dimensions";
-  } catch (const char* exception) {
-      std::cerr << "Error: " << exception << '\n';
-      exit(1);
+int Vector<type>::getIndex() {
+  return index_;
+}
+
+
+
+template <typename type>
+void Vector<type>::setSize(int size) {
+  if (this->dimensions() == 0) {
+    type newValue;
+    for (int i = 0; i < size; i++)
+      coordinates_->addBack(newValue);
   }
+}
 
-  Vector<type> ret;
-  ret.setSize(vector1.length());
 
-  for (int i = 0; i < vector1.length(); i++)
-    ret.coordinates_[i] = vector2.coordinates_[i] + vector1.coordinates_[i];
+
+template <typename type>
+type Vector<type>::norm() {
+  type ret;
+
+  for (int i = 0 ; i < this->dimensions(); i++)
+    ret = ret + (*this)[i] * (*this)[i];
+
+  return (type)sqrt(ret);
+}
+
+
+
+template <typename type>
+type Vector<type>::m_norm() {
+  type ret;
+
+  if (this->dimensions() > 0)
+    ret = (*this)[0];
+  for (int i = 1; i < this->dimensions(); i++)
+    if (ret < (*this)[i])
+      ret = (*this)[i];
 
   return ret;
 }
@@ -52,20 +91,13 @@ Vector<type>& operator + (Vector<type>& vector1, Vector<type>& vector2) const {
 
 
 template <typename type>
-Vector<type>& operator - (Vector<type>& vector1, Vector<type>& vector2) const {
-  try {
-    if (vector1.length() != vector2.length())
-      throw "vectors of different dimensions";
-  } catch (const char* exception) {
-      std::cerr << "Error: " << exception << '\n';
-      exit(1);
-  }
+type Vector<type>::l_norm() {
+  type ret;
 
-  Vector<type> ret;
-  ret.setSize(vector1.length());
-
-  for (int i = 0; i < vector1.length(); i++)
-    ret.coordinates_[i] = vector1.coordinates_[i] - vector2.coordinates_[i];
+  if (this->dimensions() > 0)
+    ret = (*this)[0];
+  for (int i = 1; i < this->dimensions(); i++)
+    ret = ret + (*this)[i];
 
   return ret;
 }
@@ -73,20 +105,115 @@ Vector<type>& operator - (Vector<type>& vector1, Vector<type>& vector2) const {
 
 
 template <typename type>
-type operator * (Vector<type>& vector1, Vector<type>& vector2) {
+int Vector<type>::dimensions() {
+  return coordinates_->length();
+}
 
+
+template <typename type>
+int Vector<type>::sequenceType() {
+  return sequence_type_;
 }
 
 
 
 template <typename type>
-Vector<type> operator * (Vector<type>& vector, type value) {
+Vector<type> Vector<type>::operator + (Vector<type>& vector) {
+  try {
+    if (vector.dimensions() != this->dimensions())
+      throw "different dimensions of vectors";
+  } catch (const char* exception) {
+      std::cerr << "Error: " << exception << '\n';
+      exit(1);
+  }
 
+  Vector<type> ret(this->sequence_type_, this->dimensions());
+
+  for (int i = 0 ; i < this->dimensions(); i++)
+    ret[i] = (*this)[i] + vector[i];
+
+  return ret;
 }
 
 
 
 template <typename type>
-Vector<type> operator * (type value, Vector<type>& vector) {
+Vector<type> Vector<type>::operator - (Vector<type>& vector) {
+  try {
+    if (vector.dimensions() != this->dimensions())
+      throw "different dimensions of vectors";
+  } catch (const char* exception) {
+      std::cerr << "Error: " << exception << '\n';
+      exit(1);
+  }
 
+  Vector<type> ret(this->sequence_type_, this->dimensions());
+
+  for (int i = 0 ; i < this->dimensions(); i++)
+    ret[i] = (*this)[i] - vector[i];
+
+  return ret;
+}
+
+
+
+template <typename type>
+type Vector<type>::operator * (Vector<type>& vector) {
+  try {
+    if (vector.dimensions() != this->dimensions())
+      throw "different dimensions of vectors";
+  } catch (const char* exception) {
+      std::cerr << "Error: " << exception << '\n';
+      exit(1);
+  }
+
+  type ret;
+  ret = 0;
+
+  for (int i = 0; i < this->dimensions(); i++)
+    ret += (*this)[i] * vector[i];
+
+  return ret;
+}
+
+
+
+template <typename type>
+Vector<type> Vector<type>::operator * (type value) {
+  Vector<type> ret(this->sequence_type_, this->dimensions());
+
+  for (int i = 0 ; i < this->dimensions(); i++)
+    ret[i] = (*this)[i] * value;
+
+  return ret;
+}
+
+
+
+template <typename type>
+type& Vector<type>::operator [] (int index) {
+  return (*coordinates_)[index];
+}
+
+
+
+template <typename type>
+void Vector<type>::operator = (Vector<type> vector) {
+  try {
+    if (vector.dimensions() != this->dimensions())
+      throw "different dimensions of vectors";
+  } catch (const char* exception) {
+      std::cerr << "Error: " << exception << '\n';
+      exit(1);
+  }
+
+  for (int i = 0 ; i < this->dimensions(); i++)
+    (*this)[i] = vector[i];
+}
+
+
+
+template <typename type>
+Vector<type>::~Vector() {
+  delete coordinates_;
 }

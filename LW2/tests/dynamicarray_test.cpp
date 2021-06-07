@@ -27,7 +27,7 @@ void dynamicarray_test() {
 
 	print(&array);
 
-	array.resize(14);
+	array.resize(2);
 
 	print(&array);
 

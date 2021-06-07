@@ -15,6 +15,8 @@ public:
 	DynamicArraySequence(const type* items, int count);
 	DynamicArraySequence(const Sequence<type>& value);
 
+	void resize(int size);
+	
 	type getFirst() const;
 	type getLast() const;
 	type get(int index) const;
@@ -26,7 +28,7 @@ public:
 	void insert(type item, int index);
 	DynamicArraySequence<type>* concat(const Sequence<type>& value);
 
-	type& operator[] (int index);
+	type& operator[] (int index) const;
 	
 	friend DynamicArraySequence<type>* DynamicArraySequence<type>::concat(const Sequence<type>& value);
 

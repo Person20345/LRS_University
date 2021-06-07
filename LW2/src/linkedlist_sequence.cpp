@@ -31,6 +31,20 @@ LinkedListSequence<type>::LinkedListSequence(const Sequence<type>& value) {
 
 
 template <typename type>
+void LinkedListSequence<type>::resize(int size) {
+	if (size < list_->length()) {
+		for (int i = 0; i < list_->length() - size; i++)
+			list_->remove(list_->length() - i - 1);
+	} else if (size > list_->length()) {
+		type value;
+		for (int i = 0; i < size - list_->length(); i++)
+			list_->addBack(value);
+	}
+}
+
+
+
+template <typename type>
 type LinkedListSequence<type>::getFirst() const {
 	return list_->getFirst();
 }
@@ -96,7 +110,7 @@ void LinkedListSequence<type>::insert(type item, int index) {
 
 
 template <typename type>
-type& LinkedListSequence<type>::operator[] (int index) {
+type& LinkedListSequence<type>::operator[] (int index) const {
 	return (*list_)[index];
 }
 
@@ -124,6 +138,5 @@ LinkedListSequence<type>* LinkedListSequence<type>::concat(const Sequence<type>&
 
 template <typename type>
 LinkedListSequence<type>::~LinkedListSequence() {
-	list_->~LinkedList();
 	delete list_;
 }
