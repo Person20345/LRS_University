@@ -19,6 +19,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/test.out.dir/tests/dynamicarray_test.cpp.o.d"
   "CMakeFiles/test.out.dir/tests/linkedlist_test.cpp.o"
   "CMakeFiles/test.out.dir/tests/linkedlist_test.cpp.o.d"
+  "CMakeFiles/test.out.dir/tests/matrix_test.cpp.o"
+  "CMakeFiles/test.out.dir/tests/matrix_test.cpp.o.d"
   "CMakeFiles/test.out.dir/tests/sequence_test.cpp.o"
   "CMakeFiles/test.out.dir/tests/sequence_test.cpp.o.d"
   "CMakeFiles/test.out.dir/tests/vector_test.cpp.o"

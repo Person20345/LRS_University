@@ -369,6 +369,30 @@ tests/linkedlist_test.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.out.dir/build.make CMakeFiles/test.out.dir/tests/linkedlist_test.cpp.s
 .PHONY : tests/linkedlist_test.cpp.s
 
+tests/matrix_test.o: tests/matrix_test.cpp.o
+.PHONY : tests/matrix_test.o
+
+# target to build an object file
+tests/matrix_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.out.dir/build.make CMakeFiles/test.out.dir/tests/matrix_test.cpp.o
+.PHONY : tests/matrix_test.cpp.o
+
+tests/matrix_test.i: tests/matrix_test.cpp.i
+.PHONY : tests/matrix_test.i
+
+# target to preprocess a source file
+tests/matrix_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.out.dir/build.make CMakeFiles/test.out.dir/tests/matrix_test.cpp.i
+.PHONY : tests/matrix_test.cpp.i
+
+tests/matrix_test.s: tests/matrix_test.cpp.s
+.PHONY : tests/matrix_test.s
+
+# target to generate assembly for a file
+tests/matrix_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.out.dir/build.make CMakeFiles/test.out.dir/tests/matrix_test.cpp.s
+.PHONY : tests/matrix_test.cpp.s
+
 tests/sequence_test.o: tests/sequence_test.cpp.o
 .PHONY : tests/sequence_test.o
 
@@ -480,6 +504,9 @@ help:
 	@echo "... tests/linkedlist_test.o"
 	@echo "... tests/linkedlist_test.i"
 	@echo "... tests/linkedlist_test.s"
+	@echo "... tests/matrix_test.o"
+	@echo "... tests/matrix_test.i"
+	@echo "... tests/matrix_test.s"
 	@echo "... tests/sequence_test.o"
 	@echo "... tests/sequence_test.i"
 	@echo "... tests/sequence_test.s"

@@ -1,9 +1,9 @@
 #include <iostream>
 
-#include "tests/vector_test.h"
+#include "tests/matrix_test.h"
 
 int main() {
-	vector_test();
+	matrix_test();
 
 	return 0;
 }

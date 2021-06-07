@@ -18,6 +18,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/danilkandakov/desktop/LWS/LW2/templates.cpp" "CMakeFiles/test.out.dir/templates.cpp.o" "gcc" "CMakeFiles/test.out.dir/templates.cpp.o.d"
   "/Users/danilkandakov/desktop/LWS/LW2/tests/dynamicarray_test.cpp" "CMakeFiles/test.out.dir/tests/dynamicarray_test.cpp.o" "gcc" "CMakeFiles/test.out.dir/tests/dynamicarray_test.cpp.o.d"
   "/Users/danilkandakov/desktop/LWS/LW2/tests/linkedlist_test.cpp" "CMakeFiles/test.out.dir/tests/linkedlist_test.cpp.o" "gcc" "CMakeFiles/test.out.dir/tests/linkedlist_test.cpp.o.d"
+  "/Users/danilkandakov/desktop/LWS/LW2/tests/matrix_test.cpp" "CMakeFiles/test.out.dir/tests/matrix_test.cpp.o" "gcc" "CMakeFiles/test.out.dir/tests/matrix_test.cpp.o.d"
   "/Users/danilkandakov/desktop/LWS/LW2/tests/sequence_test.cpp" "CMakeFiles/test.out.dir/tests/sequence_test.cpp.o" "gcc" "CMakeFiles/test.out.dir/tests/sequence_test.cpp.o.d"
   "/Users/danilkandakov/desktop/LWS/LW2/tests/vector_test.cpp" "CMakeFiles/test.out.dir/tests/vector_test.cpp.o" "gcc" "CMakeFiles/test.out.dir/tests/vector_test.cpp.o.d"
   "/Users/danilkandakov/desktop/LWS/LW2/tests/vector_time_test.cpp" "CMakeFiles/test.out.dir/tests/vector_time_test.cpp.o" "gcc" "CMakeFiles/test.out.dir/tests/vector_time_test.cpp.o.d"

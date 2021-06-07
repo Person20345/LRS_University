@@ -19,7 +19,6 @@ private:
 public:
   Matrix();
 
-
 };
 
 #endif

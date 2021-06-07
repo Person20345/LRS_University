@@ -1,5 +1,7 @@
-CMakeFiles/test.out.dir/main.cpp.o: \
-  /Users/danilkandakov/desktop/LWS/LW2/main.cpp \
+CMakeFiles/test.out.dir/tests/matrix_test.cpp.o: \
+  /Users/danilkandakov/desktop/LWS/LW2/tests/matrix_test.cpp \
+  /Users/danilkandakov/desktop/LWS/LW2/tests/matrix_test.h \
+  /Users/danilkandakov/desktop/LWS/LW2/tests/../src/sequence.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/pthread.h \
@@ -224,8 +226,6 @@ CMakeFiles/test.out.dir/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__bsd_locale_defaults.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/bitset \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__bit_reference \
-  /Users/danilkandakov/desktop/LWS/LW2/tests/matrix_test.h \
-  /Users/danilkandakov/desktop/LWS/LW2/tests/../src/sequence.h \
   /Users/danilkandakov/desktop/LWS/LW2/tests/../src/dynamicarray_sequence.h \
   /Users/danilkandakov/desktop/LWS/LW2/tests/../src/dynamicarray.h \
   /Users/danilkandakov/desktop/LWS/LW2/tests/../src/linkedlist_sequence.h \
