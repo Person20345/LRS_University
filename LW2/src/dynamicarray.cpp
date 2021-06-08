@@ -152,8 +152,6 @@ void DynamicArray<type>::resize(int newSize) {
 	for (int i = 0; i < newSize; i++)
 		if (i < size_)
 			updated_array[i] = array_[i];
-		else
-			updated_array[i] = 0;
 
 	delete[] array_;
 	array_ = updated_array;

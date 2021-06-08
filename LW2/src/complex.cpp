@@ -167,3 +167,16 @@ Complex sqrt(Complex number) {
 
 	return ret;
 }
+
+
+
+Complex pow(Complex number, double pow_) {
+	Complex ret;
+
+	double sqrt_z = pow((double)sqrt((number.Im * number.Im) + (number.Re * number.Re)), pow_);
+
+	ret.Re = sqrt_z * cos(atan(number.Im/number.Re) * pow_);
+	ret.Im = sqrt_z * sin(atan(number.Im/number.Re) * pow_);
+
+	return ret;
+}

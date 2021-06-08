@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/danilkandakov/desktop/LWS/LW2/src/dynamicarray.cpp" "CMakeFiles/test.out.dir/src/dynamicarray.cpp.o" "gcc" "CMakeFiles/test.out.dir/src/dynamicarray.cpp.o.d"
   "/Users/danilkandakov/desktop/LWS/LW2/src/dynamicarray_sequence.cpp" "CMakeFiles/test.out.dir/src/dynamicarray_sequence.cpp.o" "gcc" "CMakeFiles/test.out.dir/src/dynamicarray_sequence.cpp.o.d"
   "/Users/danilkandakov/desktop/LWS/LW2/src/linkedlist.cpp" "CMakeFiles/test.out.dir/src/linkedlist.cpp.o" "gcc" "CMakeFiles/test.out.dir/src/linkedlist.cpp.o.d"
+  "/Users/danilkandakov/desktop/LWS/LW2/src/matrix.cpp" "CMakeFiles/test.out.dir/src/matrix.cpp.o" "gcc" "CMakeFiles/test.out.dir/src/matrix.cpp.o.d"
   "/Users/danilkandakov/desktop/LWS/LW2/src/sequence.cpp" "CMakeFiles/test.out.dir/src/sequence.cpp.o" "gcc" "CMakeFiles/test.out.dir/src/sequence.cpp.o.d"
   "/Users/danilkandakov/desktop/LWS/LW2/src/vector.cpp" "CMakeFiles/test.out.dir/src/vector.cpp.o" "gcc" "CMakeFiles/test.out.dir/src/vector.cpp.o.d"
   "/Users/danilkandakov/desktop/LWS/LW2/templates.cpp" "CMakeFiles/test.out.dir/templates.cpp.o" "gcc" "CMakeFiles/test.out.dir/templates.cpp.o.d"

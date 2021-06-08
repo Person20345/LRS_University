@@ -20,6 +20,10 @@
 #include "src/vector.h"
 #include "src/vector.cpp"
 
+
+#include "src/matrix.h"
+#include "src/matrix.cpp"
+
 /**
  * Templates file for each type in this program
  * 
@@ -51,3 +55,23 @@ template class Sequence<Complex>;
 template class DynamicArraySequence<Complex>;
 template class LinkedListSequence<Complex>;
 template class Vector<Complex>;
+
+
+
+template class Sequence<Sequence<int> >;
+template class DynamicArraySequence<DynamicArraySequence<int> >;
+template class LinkedListSequence<LinkedListSequence<int> >;
+
+template class Sequence<Sequence<double> >;
+template class DynamicArraySequence<DynamicArraySequence<double> >;
+template class LinkedListSequence<LinkedListSequence<double> >;
+
+template class Sequence<Sequence<Complex> >;
+template class DynamicArraySequence<DynamicArraySequence<Complex> >;
+template class LinkedListSequence<LinkedListSequence<Complex> >;
+
+
+
+template class Matrix<int>;
+template class Matrix<double>;
+template class Matrix<Complex>;

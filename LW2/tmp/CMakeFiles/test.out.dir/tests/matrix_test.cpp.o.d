@@ -230,7 +230,7 @@ CMakeFiles/test.out.dir/tests/matrix_test.cpp.o: \
   /Users/danilkandakov/desktop/LWS/LW2/tests/../src/dynamicarray.h \
   /Users/danilkandakov/desktop/LWS/LW2/tests/../src/linkedlist_sequence.h \
   /Users/danilkandakov/desktop/LWS/LW2/tests/../src/linkedlist.h \
-  /Users/danilkandakov/desktop/LWS/LW2/tests/../src/vector.h \
+  /Users/danilkandakov/desktop/LWS/LW2/tests/../src/matrix.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/cmath \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/math.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/math.h \

@@ -239,4 +239,6 @@ CMakeFiles/test.out.dir/templates.cpp.o: \
   /Users/danilkandakov/desktop/LWS/LW2/src/linkedlist_sequence.h \
   /Users/danilkandakov/desktop/LWS/LW2/src/linkedlist_sequence.cpp \
   /Users/danilkandakov/desktop/LWS/LW2/src/vector.h \
-  /Users/danilkandakov/desktop/LWS/LW2/src/vector.cpp
+  /Users/danilkandakov/desktop/LWS/LW2/src/vector.cpp \
+  /Users/danilkandakov/desktop/LWS/LW2/src/matrix.h \
+  /Users/danilkandakov/desktop/LWS/LW2/src/matrix.cpp

@@ -138,13 +138,13 @@ LinkedList<type>* LinkedList<type>::getSubList(int indexStart, int indexEnd) con
 template <typename type>
 void LinkedList<type>::addBack(type item) {
 	size_++;
-
+	
 	if (size_ - 1 == 0) {
-		head_ = (LinkedList<type>::Element*) new LinkedList<type>::Element[1];
+		head_ = (LinkedList<type>::Element*) new LinkedList<type>::Element;
 		tail_ = head_;
 		tail_->value_ = item;
 	} else {
-		tail_->next_ = (LinkedList<type>::Element*) new LinkedList<type>::Element[1];
+		tail_->next_ = (LinkedList<type>::Element*) new LinkedList<type>::Element;
 		tail_ = tail_->next_;
 		tail_->value_ = item;
 	}
@@ -164,13 +164,13 @@ template <typename type>
 void LinkedList<type>::addForward(type item) {
 	size_++;
 	if (size_ - 1 == 0) {
-		head_ = (LinkedList<type>::Element*) new LinkedList<type>::Element[1];
+		head_ = (LinkedList<type>::Element*) new LinkedList<type>::Element;
 		tail_ = head_;
 		head_->value_ = item;
 	} else {
 		typename LinkedList<type>::Element* element = head_;
 	
-		head_ = (LinkedList<type>::Element*) new LinkedList<type>::Element[1];
+		head_ = (LinkedList<type>::Element*) new LinkedList<type>::Element;
 		head_->value_ = item;
 
 		head_->next_ = element;
@@ -203,14 +203,14 @@ void LinkedList<type>::insert(type item, int index) {
 	if (index == 0) {
 		element_1 = head_;
 
-		head_ = (LinkedList<type>::Element*) new LinkedList<type>::Element[1];
+		head_ = (LinkedList<type>::Element*) new LinkedList<type>::Element;
 		head_->value_ = item;
 		head_->next_ = element_1;
 	} else {
 		element_1 = LinkedList<type>::getElement(index - 1);
 		element_2 = element_1->next_;
 
-		element_1->next_ = (LinkedList<type>::Element*) new LinkedList<type>::Element[1];
+		element_1->next_ = (LinkedList<type>::Element*) new LinkedList<type>::Element;
 		element_1->next_->next_ = element_2;
 		element_1->next_->value_ = item;
 	}
@@ -248,7 +248,7 @@ void LinkedList<type>::remove(int index) {
 
 template <typename type>
 LinkedList<type>* LinkedList<type>::concat(LinkedList<type>& list) {
-	LinkedList<type>* ret_list = (LinkedList<type>*) new LinkedList<type>[1];
+	LinkedList<type>* ret_list = (LinkedList<type>*) new LinkedList<type>;
 	typename LinkedList<type>::Element* element = this->head_;
 
 	for (int i = 0; i < this->size_; i++) {
@@ -272,8 +272,7 @@ LinkedList<type>* LinkedList<type>::concat(LinkedList<type>& list) {
 
 template <typename type>
 type& LinkedList<type>::operator[] (int index) {
-	typename LinkedList<type>::Element* element = LinkedList<type>::getElement(index);
-	return element->value_;
+	return LinkedList<type>::getElement(index)->value_;
 }
 
 

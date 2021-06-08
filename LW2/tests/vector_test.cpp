@@ -47,9 +47,9 @@ void init(Complex* value, int i) {
 void vector_test() {
 	// LINKEDLIST_TYPE or DYNAMICARRAY_TYPE
 	int size = 3;
-	Vector<Complex> vec1(DYNAMICARRAY_TYPE, size);
-	Vector<Complex> vec2(DYNAMICARRAY_TYPE, size);
-	Vector<Complex> vec3(DYNAMICARRAY_TYPE, size);
+	Vector<Complex> vec1(LINKEDLIST_TYPE, size);
+	Vector<Complex> vec2(LINKEDLIST_TYPE, size);
+	Vector<Complex> vec3(LINKEDLIST_TYPE, size);
 	Complex value;
 
 	// for debug
@@ -66,7 +66,7 @@ void vector_test() {
 	print(&vec2);
 	printf("\n");
 
-	vec3 = vec1 + vec2;
+	vec3 = vec1 + vec2 + vec2;
 	print(&vec3);
 	printf("\n");
 

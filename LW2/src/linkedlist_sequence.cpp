@@ -5,7 +5,7 @@
 
 template <typename type>
 LinkedListSequence<type>::LinkedListSequence() {
-	list_ = (LinkedList<type>*) new LinkedList<type>; 
+	list_ = (LinkedList<type>*) new LinkedList<type>;
 }
 
 
@@ -36,9 +36,11 @@ void LinkedListSequence<type>::resize(int size) {
 		for (int i = 0; i < list_->length() - size; i++)
 			list_->remove(list_->length() - i - 1);
 	} else if (size > list_->length()) {
-		type value;
-		for (int i = 0; i < size - list_->length(); i++)
+		// fuck this shit
+		for (int i = 0; i < size - list_->length(); i++) {
+			type value;
 			list_->addBack(value);
+		}
 	}
 }
 
@@ -112,6 +114,14 @@ void LinkedListSequence<type>::insert(type item, int index) {
 template <typename type>
 type& LinkedListSequence<type>::operator[] (int index) const {
 	return (*list_)[index];
+}
+
+
+
+template <typename type>
+void LinkedListSequence<type>::operator = (LinkedListSequence<type> list) {
+	for (int i = 0; i < this->length(); i++)
+		(*this)[i] = list[i];
 }
 
 

@@ -1,5 +1,6 @@
-CMakeFiles/test.out.dir/main.cpp.o: \
-  /Users/danilkandakov/desktop/LWS/LW2/main.cpp \
+CMakeFiles/test.out.dir/src/matrix.cpp.o: \
+  /Users/danilkandakov/desktop/LWS/LW2/src/matrix.cpp \
+  /Users/danilkandakov/desktop/LWS/LW2/src/matrix.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/pthread.h \
@@ -224,14 +225,12 @@ CMakeFiles/test.out.dir/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__bsd_locale_defaults.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/bitset \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/__bit_reference \
-  /Users/danilkandakov/desktop/LWS/LW2/tests/vector_test.h \
-  /Users/danilkandakov/desktop/LWS/LW2/tests/../src/sequence.h \
-  /Users/danilkandakov/desktop/LWS/LW2/tests/../src/dynamicarray_sequence.h \
-  /Users/danilkandakov/desktop/LWS/LW2/tests/../src/dynamicarray.h \
-  /Users/danilkandakov/desktop/LWS/LW2/tests/../src/linkedlist_sequence.h \
-  /Users/danilkandakov/desktop/LWS/LW2/tests/../src/linkedlist.h \
-  /Users/danilkandakov/desktop/LWS/LW2/tests/../src/vector.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/cmath \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/c++/v1/math.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.3.sdk/usr/include/math.h \
-  /Users/danilkandakov/desktop/LWS/LW2/tests/../src/complex.h
+  /Users/danilkandakov/desktop/LWS/LW2/src/sequence.h \
+  /Users/danilkandakov/desktop/LWS/LW2/src/linkedlist_sequence.h \
+  /Users/danilkandakov/desktop/LWS/LW2/src/linkedlist.h \
+  /Users/danilkandakov/desktop/LWS/LW2/src/dynamicarray_sequence.h \
+  /Users/danilkandakov/desktop/LWS/LW2/src/dynamicarray.h \
+  /Users/danilkandakov/desktop/LWS/LW2/src/complex.h

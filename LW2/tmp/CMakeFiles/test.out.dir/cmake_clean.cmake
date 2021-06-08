@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/test.out.dir/src/dynamicarray_sequence.cpp.o.d"
   "CMakeFiles/test.out.dir/src/linkedlist.cpp.o"
   "CMakeFiles/test.out.dir/src/linkedlist.cpp.o.d"
+  "CMakeFiles/test.out.dir/src/matrix.cpp.o"
+  "CMakeFiles/test.out.dir/src/matrix.cpp.o.d"
   "CMakeFiles/test.out.dir/src/sequence.cpp.o"
   "CMakeFiles/test.out.dir/src/sequence.cpp.o.d"
   "CMakeFiles/test.out.dir/src/vector.cpp.o"

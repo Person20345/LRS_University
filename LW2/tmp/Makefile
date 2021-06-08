@@ -249,6 +249,30 @@ src/linkedlist.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.out.dir/build.make CMakeFiles/test.out.dir/src/linkedlist.cpp.s
 .PHONY : src/linkedlist.cpp.s
 
+src/matrix.o: src/matrix.cpp.o
+.PHONY : src/matrix.o
+
+# target to build an object file
+src/matrix.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.out.dir/build.make CMakeFiles/test.out.dir/src/matrix.cpp.o
+.PHONY : src/matrix.cpp.o
+
+src/matrix.i: src/matrix.cpp.i
+.PHONY : src/matrix.i
+
+# target to preprocess a source file
+src/matrix.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.out.dir/build.make CMakeFiles/test.out.dir/src/matrix.cpp.i
+.PHONY : src/matrix.cpp.i
+
+src/matrix.s: src/matrix.cpp.s
+.PHONY : src/matrix.s
+
+# target to generate assembly for a file
+src/matrix.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.out.dir/build.make CMakeFiles/test.out.dir/src/matrix.cpp.s
+.PHONY : src/matrix.cpp.s
+
 src/sequence.o: src/sequence.cpp.o
 .PHONY : src/sequence.o
 
@@ -489,6 +513,9 @@ help:
 	@echo "... src/linkedlist.o"
 	@echo "... src/linkedlist.i"
 	@echo "... src/linkedlist.s"
+	@echo "... src/matrix.o"
+	@echo "... src/matrix.i"
+	@echo "... src/matrix.s"
 	@echo "... src/sequence.o"
 	@echo "... src/sequence.i"
 	@echo "... src/sequence.s"

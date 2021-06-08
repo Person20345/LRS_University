@@ -29,6 +29,7 @@ public:
 	LinkedListSequence<type>* concat(const Sequence<type>& value);
 
 	type& operator[] (int index) const;
+	void operator = (LinkedListSequence<type> list);
 
 	friend LinkedListSequence<type>* LinkedListSequence<type>::concat(const Sequence<type>& value);
 

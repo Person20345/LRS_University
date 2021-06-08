@@ -111,10 +111,24 @@ CMakeFiles/test.out.dir/src/complex.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.out.dir/src/complex.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/danilkandakov/desktop/LWS/LW2/src/complex.cpp -o CMakeFiles/test.out.dir/src/complex.cpp.s
 
+CMakeFiles/test.out.dir/src/matrix.cpp.o: CMakeFiles/test.out.dir/flags.make
+CMakeFiles/test.out.dir/src/matrix.cpp.o: ../src/matrix.cpp
+CMakeFiles/test.out.dir/src/matrix.cpp.o: CMakeFiles/test.out.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danilkandakov/desktop/LWS/LW2/tmp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/test.out.dir/src/matrix.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.out.dir/src/matrix.cpp.o -MF CMakeFiles/test.out.dir/src/matrix.cpp.o.d -o CMakeFiles/test.out.dir/src/matrix.cpp.o -c /Users/danilkandakov/desktop/LWS/LW2/src/matrix.cpp
+
+CMakeFiles/test.out.dir/src/matrix.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.out.dir/src/matrix.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/danilkandakov/desktop/LWS/LW2/src/matrix.cpp > CMakeFiles/test.out.dir/src/matrix.cpp.i
+
+CMakeFiles/test.out.dir/src/matrix.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.out.dir/src/matrix.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/danilkandakov/desktop/LWS/LW2/src/matrix.cpp -o CMakeFiles/test.out.dir/src/matrix.cpp.s
+
 CMakeFiles/test.out.dir/src/vector.cpp.o: CMakeFiles/test.out.dir/flags.make
 CMakeFiles/test.out.dir/src/vector.cpp.o: ../src/vector.cpp
 CMakeFiles/test.out.dir/src/vector.cpp.o: CMakeFiles/test.out.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danilkandakov/desktop/LWS/LW2/tmp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/test.out.dir/src/vector.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danilkandakov/desktop/LWS/LW2/tmp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/test.out.dir/src/vector.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.out.dir/src/vector.cpp.o -MF CMakeFiles/test.out.dir/src/vector.cpp.o.d -o CMakeFiles/test.out.dir/src/vector.cpp.o -c /Users/danilkandakov/desktop/LWS/LW2/src/vector.cpp
 
 CMakeFiles/test.out.dir/src/vector.cpp.i: cmake_force
@@ -128,7 +142,7 @@ CMakeFiles/test.out.dir/src/vector.cpp.s: cmake_force
 CMakeFiles/test.out.dir/src/sequence.cpp.o: CMakeFiles/test.out.dir/flags.make
 CMakeFiles/test.out.dir/src/sequence.cpp.o: ../src/sequence.cpp
 CMakeFiles/test.out.dir/src/sequence.cpp.o: CMakeFiles/test.out.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danilkandakov/desktop/LWS/LW2/tmp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/test.out.dir/src/sequence.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danilkandakov/desktop/LWS/LW2/tmp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/test.out.dir/src/sequence.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.out.dir/src/sequence.cpp.o -MF CMakeFiles/test.out.dir/src/sequence.cpp.o.d -o CMakeFiles/test.out.dir/src/sequence.cpp.o -c /Users/danilkandakov/desktop/LWS/LW2/src/sequence.cpp
 
 CMakeFiles/test.out.dir/src/sequence.cpp.i: cmake_force
@@ -142,7 +156,7 @@ CMakeFiles/test.out.dir/src/sequence.cpp.s: cmake_force
 CMakeFiles/test.out.dir/src/dynamicarray_sequence.cpp.o: CMakeFiles/test.out.dir/flags.make
 CMakeFiles/test.out.dir/src/dynamicarray_sequence.cpp.o: ../src/dynamicarray_sequence.cpp
 CMakeFiles/test.out.dir/src/dynamicarray_sequence.cpp.o: CMakeFiles/test.out.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danilkandakov/desktop/LWS/LW2/tmp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/test.out.dir/src/dynamicarray_sequence.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danilkandakov/desktop/LWS/LW2/tmp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/test.out.dir/src/dynamicarray_sequence.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.out.dir/src/dynamicarray_sequence.cpp.o -MF CMakeFiles/test.out.dir/src/dynamicarray_sequence.cpp.o.d -o CMakeFiles/test.out.dir/src/dynamicarray_sequence.cpp.o -c /Users/danilkandakov/desktop/LWS/LW2/src/dynamicarray_sequence.cpp
 
 CMakeFiles/test.out.dir/src/dynamicarray_sequence.cpp.i: cmake_force
@@ -156,7 +170,7 @@ CMakeFiles/test.out.dir/src/dynamicarray_sequence.cpp.s: cmake_force
 CMakeFiles/test.out.dir/src/dynamicarray.cpp.o: CMakeFiles/test.out.dir/flags.make
 CMakeFiles/test.out.dir/src/dynamicarray.cpp.o: ../src/dynamicarray.cpp
 CMakeFiles/test.out.dir/src/dynamicarray.cpp.o: CMakeFiles/test.out.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danilkandakov/desktop/LWS/LW2/tmp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/test.out.dir/src/dynamicarray.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danilkandakov/desktop/LWS/LW2/tmp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/test.out.dir/src/dynamicarray.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.out.dir/src/dynamicarray.cpp.o -MF CMakeFiles/test.out.dir/src/dynamicarray.cpp.o.d -o CMakeFiles/test.out.dir/src/dynamicarray.cpp.o -c /Users/danilkandakov/desktop/LWS/LW2/src/dynamicarray.cpp
 
 CMakeFiles/test.out.dir/src/dynamicarray.cpp.i: cmake_force
@@ -170,7 +184,7 @@ CMakeFiles/test.out.dir/src/dynamicarray.cpp.s: cmake_force
 CMakeFiles/test.out.dir/tests/matrix_test.cpp.o: CMakeFiles/test.out.dir/flags.make
 CMakeFiles/test.out.dir/tests/matrix_test.cpp.o: ../tests/matrix_test.cpp
 CMakeFiles/test.out.dir/tests/matrix_test.cpp.o: CMakeFiles/test.out.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danilkandakov/desktop/LWS/LW2/tmp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/test.out.dir/tests/matrix_test.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danilkandakov/desktop/LWS/LW2/tmp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/test.out.dir/tests/matrix_test.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.out.dir/tests/matrix_test.cpp.o -MF CMakeFiles/test.out.dir/tests/matrix_test.cpp.o.d -o CMakeFiles/test.out.dir/tests/matrix_test.cpp.o -c /Users/danilkandakov/desktop/LWS/LW2/tests/matrix_test.cpp
 
 CMakeFiles/test.out.dir/tests/matrix_test.cpp.i: cmake_force
@@ -184,7 +198,7 @@ CMakeFiles/test.out.dir/tests/matrix_test.cpp.s: cmake_force
 CMakeFiles/test.out.dir/tests/vector_time_test.cpp.o: CMakeFiles/test.out.dir/flags.make
 CMakeFiles/test.out.dir/tests/vector_time_test.cpp.o: ../tests/vector_time_test.cpp
 CMakeFiles/test.out.dir/tests/vector_time_test.cpp.o: CMakeFiles/test.out.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danilkandakov/desktop/LWS/LW2/tmp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/test.out.dir/tests/vector_time_test.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danilkandakov/desktop/LWS/LW2/tmp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/test.out.dir/tests/vector_time_test.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.out.dir/tests/vector_time_test.cpp.o -MF CMakeFiles/test.out.dir/tests/vector_time_test.cpp.o.d -o CMakeFiles/test.out.dir/tests/vector_time_test.cpp.o -c /Users/danilkandakov/desktop/LWS/LW2/tests/vector_time_test.cpp
 
 CMakeFiles/test.out.dir/tests/vector_time_test.cpp.i: cmake_force
@@ -198,7 +212,7 @@ CMakeFiles/test.out.dir/tests/vector_time_test.cpp.s: cmake_force
 CMakeFiles/test.out.dir/tests/vector_test.cpp.o: CMakeFiles/test.out.dir/flags.make
 CMakeFiles/test.out.dir/tests/vector_test.cpp.o: ../tests/vector_test.cpp
 CMakeFiles/test.out.dir/tests/vector_test.cpp.o: CMakeFiles/test.out.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danilkandakov/desktop/LWS/LW2/tmp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/test.out.dir/tests/vector_test.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danilkandakov/desktop/LWS/LW2/tmp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/test.out.dir/tests/vector_test.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.out.dir/tests/vector_test.cpp.o -MF CMakeFiles/test.out.dir/tests/vector_test.cpp.o.d -o CMakeFiles/test.out.dir/tests/vector_test.cpp.o -c /Users/danilkandakov/desktop/LWS/LW2/tests/vector_test.cpp
 
 CMakeFiles/test.out.dir/tests/vector_test.cpp.i: cmake_force
@@ -212,7 +226,7 @@ CMakeFiles/test.out.dir/tests/vector_test.cpp.s: cmake_force
 CMakeFiles/test.out.dir/tests/dynamicarray_test.cpp.o: CMakeFiles/test.out.dir/flags.make
 CMakeFiles/test.out.dir/tests/dynamicarray_test.cpp.o: ../tests/dynamicarray_test.cpp
 CMakeFiles/test.out.dir/tests/dynamicarray_test.cpp.o: CMakeFiles/test.out.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danilkandakov/desktop/LWS/LW2/tmp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/test.out.dir/tests/dynamicarray_test.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danilkandakov/desktop/LWS/LW2/tmp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/test.out.dir/tests/dynamicarray_test.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.out.dir/tests/dynamicarray_test.cpp.o -MF CMakeFiles/test.out.dir/tests/dynamicarray_test.cpp.o.d -o CMakeFiles/test.out.dir/tests/dynamicarray_test.cpp.o -c /Users/danilkandakov/desktop/LWS/LW2/tests/dynamicarray_test.cpp
 
 CMakeFiles/test.out.dir/tests/dynamicarray_test.cpp.i: cmake_force
@@ -226,7 +240,7 @@ CMakeFiles/test.out.dir/tests/dynamicarray_test.cpp.s: cmake_force
 CMakeFiles/test.out.dir/tests/sequence_test.cpp.o: CMakeFiles/test.out.dir/flags.make
 CMakeFiles/test.out.dir/tests/sequence_test.cpp.o: ../tests/sequence_test.cpp
 CMakeFiles/test.out.dir/tests/sequence_test.cpp.o: CMakeFiles/test.out.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danilkandakov/desktop/LWS/LW2/tmp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/test.out.dir/tests/sequence_test.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danilkandakov/desktop/LWS/LW2/tmp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/test.out.dir/tests/sequence_test.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.out.dir/tests/sequence_test.cpp.o -MF CMakeFiles/test.out.dir/tests/sequence_test.cpp.o.d -o CMakeFiles/test.out.dir/tests/sequence_test.cpp.o -c /Users/danilkandakov/desktop/LWS/LW2/tests/sequence_test.cpp
 
 CMakeFiles/test.out.dir/tests/sequence_test.cpp.i: cmake_force
@@ -240,7 +254,7 @@ CMakeFiles/test.out.dir/tests/sequence_test.cpp.s: cmake_force
 CMakeFiles/test.out.dir/src/linkedlist.cpp.o: CMakeFiles/test.out.dir/flags.make
 CMakeFiles/test.out.dir/src/linkedlist.cpp.o: ../src/linkedlist.cpp
 CMakeFiles/test.out.dir/src/linkedlist.cpp.o: CMakeFiles/test.out.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danilkandakov/desktop/LWS/LW2/tmp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/test.out.dir/src/linkedlist.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danilkandakov/desktop/LWS/LW2/tmp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/test.out.dir/src/linkedlist.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.out.dir/src/linkedlist.cpp.o -MF CMakeFiles/test.out.dir/src/linkedlist.cpp.o.d -o CMakeFiles/test.out.dir/src/linkedlist.cpp.o -c /Users/danilkandakov/desktop/LWS/LW2/src/linkedlist.cpp
 
 CMakeFiles/test.out.dir/src/linkedlist.cpp.i: cmake_force
@@ -254,7 +268,7 @@ CMakeFiles/test.out.dir/src/linkedlist.cpp.s: cmake_force
 CMakeFiles/test.out.dir/tests/linkedlist_test.cpp.o: CMakeFiles/test.out.dir/flags.make
 CMakeFiles/test.out.dir/tests/linkedlist_test.cpp.o: ../tests/linkedlist_test.cpp
 CMakeFiles/test.out.dir/tests/linkedlist_test.cpp.o: CMakeFiles/test.out.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danilkandakov/desktop/LWS/LW2/tmp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/test.out.dir/tests/linkedlist_test.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/danilkandakov/desktop/LWS/LW2/tmp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/test.out.dir/tests/linkedlist_test.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.out.dir/tests/linkedlist_test.cpp.o -MF CMakeFiles/test.out.dir/tests/linkedlist_test.cpp.o.d -o CMakeFiles/test.out.dir/tests/linkedlist_test.cpp.o -c /Users/danilkandakov/desktop/LWS/LW2/tests/linkedlist_test.cpp
 
 CMakeFiles/test.out.dir/tests/linkedlist_test.cpp.i: cmake_force
@@ -270,6 +284,7 @@ test_out_OBJECTS = \
 "CMakeFiles/test.out.dir/main.cpp.o" \
 "CMakeFiles/test.out.dir/templates.cpp.o" \
 "CMakeFiles/test.out.dir/src/complex.cpp.o" \
+"CMakeFiles/test.out.dir/src/matrix.cpp.o" \
 "CMakeFiles/test.out.dir/src/vector.cpp.o" \
 "CMakeFiles/test.out.dir/src/sequence.cpp.o" \
 "CMakeFiles/test.out.dir/src/dynamicarray_sequence.cpp.o" \
@@ -288,6 +303,7 @@ test_out_EXTERNAL_OBJECTS =
 test.out: CMakeFiles/test.out.dir/main.cpp.o
 test.out: CMakeFiles/test.out.dir/templates.cpp.o
 test.out: CMakeFiles/test.out.dir/src/complex.cpp.o
+test.out: CMakeFiles/test.out.dir/src/matrix.cpp.o
 test.out: CMakeFiles/test.out.dir/src/vector.cpp.o
 test.out: CMakeFiles/test.out.dir/src/sequence.cpp.o
 test.out: CMakeFiles/test.out.dir/src/dynamicarray_sequence.cpp.o
@@ -301,7 +317,7 @@ test.out: CMakeFiles/test.out.dir/src/linkedlist.cpp.o
 test.out: CMakeFiles/test.out.dir/tests/linkedlist_test.cpp.o
 test.out: CMakeFiles/test.out.dir/build.make
 test.out: CMakeFiles/test.out.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/danilkandakov/desktop/LWS/LW2/tmp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable test.out"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/danilkandakov/desktop/LWS/LW2/tmp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable test.out"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test.out.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

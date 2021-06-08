@@ -37,5 +37,6 @@ public:
 };
 
 Complex sqrt(Complex number);
+Complex pow(Complex number, double pow_);
 
 #endif
