@@ -1,9 +1,9 @@
 #include <iostream>
 
-#include "tests/vector_test.h"
+#include "tests/vector_time_test.h"
 
 int main() {
-	vector_test();
+	vector_time_test();
 
 	return 0;
 }
